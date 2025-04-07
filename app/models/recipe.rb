@@ -5,12 +5,13 @@ class Recipe < ApplicationRecord
   # validation
   validates :title,
     presence: true,
-    length: { minimum: 1, maximum: 50 }
-  with_options length: { maximum: 1000 } do
+    length: { minimum: 1, maximum: 50, allow_blank: true }
+  with_options length: { maximum: 1000 }, presence: true do
     validates :description
     validates :ingredients
     validates :steps
   end
   validates :cooking_time,
-    numericality: { only_integer: true }
+    presence: true,
+    numericality: { only_integer: true, allow_blank: true }
 end
