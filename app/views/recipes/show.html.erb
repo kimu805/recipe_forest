@@ -2,13 +2,13 @@
 <p>Find me in app/views/recipes/show.html.erb</p>
 
 <h2><%= @recipe.title %> </h2>
-<p>description:  <%= simple_format(h(@recipe.description), {}, sanitize: false, wrapper_tag: "div") %></p>
-<p>ingredients:  <%= simple_format(h(@recipe.ingredients), {}, sanitize: false, wrapper_tag: "div") %></p>
-<p>steps:        <%= simple_format(h(@recipe.steps), {}, sanitize: false, wrapper_tag: "div") %></p>
-<p>cooking_time: <%= @recipe.cooking_time %></p>
-<p>user:         <%= @recipe.user.nickname %> </p>
+<p>description  <%= simple_format(h(@recipe.description), {}, sanitize: false, wrapper_tag: "div") %></p>
+<p>ingredients  <%= simple_format(h(@recipe.ingredients), {}, sanitize: false, wrapper_tag: "div") %></p>
+<p>steps  <%= simple_format(h(@recipe.steps), {}, sanitize: false, wrapper_tag: "div") %></p>
+<p>cooking_time  <%= @recipe.cooking_time %></p>
+<p>user  <%= @recipe.user.nickname %> </p>
 
 <%= link_to "back to index", root_path %> | 
 <%= link_to "edit the recipe", edit_recipe_path(@recipe) %>
 <br>
-<%= link_to "destroy the recipe", recipe_path(@recipe), method: :delete %>
+<%= link_to "destroy the recipe", recipe_path(@recipe), data: { turbo_method: :delete } %>
