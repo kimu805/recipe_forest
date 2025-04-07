@@ -10,3 +10,5 @@
 
 <%= link_to "back to index", root_path %> | 
 <%= link_to "edit the recipe", edit_recipe_path(@recipe) %>
+<br>
+<%= link_to "destroy the recipe", recipe_path(@recipe), method: :delete %>
