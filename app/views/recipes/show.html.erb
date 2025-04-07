@@ -6,6 +6,7 @@
 <p>ingredients:  <%= simple_format(h(@recipe.ingredients), {}, sanitize: false, wrapper_tag: "div") %></p>
 <p>steps:        <%= simple_format(h(@recipe.steps), {}, sanitize: false, wrapper_tag: "div") %></p>
 <p>cooking_time: <%= @recipe.cooking_time %></p>
+<p>user:         <%= @recipe.user.nickname %> </p>
 
 <%= link_to "back to index", root_path %> | 
 <%= link_to "edit the recipe", edit_recipe_path(@recipe) %>
