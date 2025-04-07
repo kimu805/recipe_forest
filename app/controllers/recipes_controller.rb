@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save!
-      redirect_to @recipe
+      redirect_to @recipe, notice: "「#{@recipe.title}」を登録しました。"
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
 
   def update
     if @recipe.update!(recipe_params)
-      redirect_to @recipe
+      redirect_to @recipe, notice: "「#{@recipe.title}」の更新が完了しました。"
     else
       render :edit, status: :unprocessable_entity
     end
@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe.destroy!
-    redirect_to root_path
+    redirect_to root_path, notice: "「#{@recipe.title}」の削除が完了しました。"
   end
 
   private
