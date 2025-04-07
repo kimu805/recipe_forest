@@ -1,4 +1,7 @@
 <%= form_with model: @recipe, local: true do |f| %>
+
+  <%= render "shared/error", { model: @recipe } %>
+
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title, autofocus: true %>
