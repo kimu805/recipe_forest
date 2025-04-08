@@ -2,6 +2,7 @@
 <p>Find me in app/views/recipes/show.html.erb</p>
 
 <h2><%= @recipe.title %> </h2>
+<%= image_tag @recipe.image.variant(resize: "300x300") if @recipe.image.attached? %>
 <p>description  <%= simple_format(h(@recipe.description), {}, sanitize: false, wrapper_tag: "div") %></p>
 <p>ingredients  <%= simple_format(h(@recipe.ingredients), {}, sanitize: false, wrapper_tag: "div") %></p>
 <p>steps  <%= simple_format(h(@recipe.steps), {}, sanitize: false, wrapper_tag: "div") %></p>
