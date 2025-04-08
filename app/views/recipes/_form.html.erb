@@ -1,0 +1,38 @@
+<%= form_with model: @recipe, local: true do |f| %>
+
+  <%= render "error", { model: @recipe } %>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients %>
+  </div>
+
+  <div class="field">
+    <%= f.label :steps %>
+    <%= f.text_area :steps %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cooking_time %>
+    <%= f.number_field :cooking_time, min: 1, step: 1 %>
+  </div>
+
+  <div class="action">
+    <%= f.submit commit_message %>
+  </div>
+<% end %>
