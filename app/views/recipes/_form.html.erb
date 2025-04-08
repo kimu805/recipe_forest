@@ -3,6 +3,11 @@
   <%= render "shared/error", { model: @recipe } %>
 
   <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title, autofocus: true %>
   </div>
