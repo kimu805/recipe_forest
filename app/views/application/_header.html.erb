@@ -10,3 +10,11 @@
     </div>
   </div>
 </header>
+
+<div class="flash_message_box">
+  <% if flash[:notice] || flash[:alert] %>
+    <div id="flash_message" class="flash_message <%= flash[:notice] ? "notice" : flash[:alert] ? "alert" : "" %>">
+      <span><%= flash[:notice] || flash[:alert] %></span>
+    </div>
+  <% end %>
+</div>
