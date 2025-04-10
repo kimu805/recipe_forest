@@ -1,0 +1,12 @@
+<header class="header">
+  <div class="header_box">
+    <div class="header_right_box">
+      <p class="logo">Recipe Forest</p>
+    </div>
+    <div class="header_left_box">
+      <% if current_user %>
+        <div class="header_left_current_user"><%= current_user.nickname %> </div>
+      <% end %>
+    </div>
+  </div>
+</header>
