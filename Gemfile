@@ -59,3 +59,4 @@ end
 gem "devise", "~> 4.9.4"
 gem "mini_magick"
 gem "image_processing", "~> 1.2"
+gem "rails-i18n"
