@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: お名前
+        profile: プロフィール
+      recipe:
+        title: 料理名
+        image: 画像
+        description: 概要
+        ingredients: 材料
+        steps: 作り方
+        cooking_time: 調理時間
